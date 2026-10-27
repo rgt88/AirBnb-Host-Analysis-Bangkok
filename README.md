@@ -24,13 +24,13 @@ Airbnb lets travelers rent a room or an entire home from a local host instead of
 | File | `data/airbnb_listings_bangkok.csv` |
 | Data dictionary | `docs/airbnb_listings_bangkok_data_dictionary.pdf` |
 | Source | [isi sumber asli dataset, mis. Inside Airbnb / Kaggle + link] |
-| Rows / columns | [isi jumlah baris] / [isi jumlah kolom] |
+| Rows / columns | 15,854 / 17 (including one unnamed index column) |
 
 ## 4. Method
 
 1. Data cleaning (missing values, duplicates, outliers) – [jelaskan singkat apa yang kamu lakukan]
 2. Descriptive statistics and visualization by area and room type
-3. Statistical test to check price differences between room types – [sebutkan uji yang dipakai, mis. Kruskal-Wallis, dan nilai p-nya]
+3. Statistical test to check price differences between room types – Kruskal-Wallis H-test (non-parametric), significance level 0.05
 4. Text analysis of listing titles (word frequency)
 
 ## 5. Key Findings
@@ -39,15 +39,22 @@ Airbnb lets travelers rent a room or an entire home from a local host instead of
 |---|---|
 | 1 | Listings are open for booking a median of **308 days per year**; the remaining days are booked or blocked by the host. |
 | 2 | The areas with the most listings are **Vadhana, Khlong Toei, Ratchathewi, Huai Khwang, and Bang Rak**. |
-| 3 | **Entire home/apt** is the most common room type [isi persentase, mis. XX%]. |
+| 3 | **Entire home/apt** is the most common room type (56.2%), followed by private room (36.4%), hotel room (4.1%), and shared room (3.3%). |
 | 4 | Typical minimum stay is **2 nights** for entire home/apt and **1 night** for other room types. |
-| 5 | Price differs significantly between room types ([uji, p = ...]). **Hotel rooms** are the most expensive on average. |
+| 5 | Price differs significantly between room types (Kruskal-Wallis H-test, p < 0.05). **Hotel rooms** are the most expensive on average. |
 | 6 | The most frequent title words are **bts, room, near, bangkok, sukhumvit, cozy, mrt**. |
 | 7 | By number of reviews, **entire home/apt** is the most booked type (assuming review count approximates bookings). |
 
-<!-- Tambahkan 1–2 grafik utama di sini, contoh:
-![Listings per area](images/listings_per_area.png)
--->
+### Selected Visuals
+
+![Top 10 neighbourhoods by number of listings](images/top_10_count_of_host_list_by_neighbourhood.jpeg)
+
+![Number of listings by room type](images/number_of_host_listing_by_room_type.jpeg)
+
+![Total review count by room type](images/total_count_review_by_room_type.jpeg)
+
+![Top 25 words used in listing names](images/top_25_words_used_in_bangkok_airbnb_names.png)
+
 
 ## 6. Recommendations
 
