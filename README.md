@@ -1,34 +1,105 @@
-# AirBnb-list-Analysis-Bangkok
+# Airbnb Host Analysis – Bangkok
 
-**Backgroud**
+Exploratory data analysis of Airbnb listings in Bangkok, aimed at helping prospective hosts decide **where** and **what type** of listing to start with.
 
-AirBnb's are basically a hotel, but you stay at someone else’s house instead. AirBnB has been everywhere around the world. This analysis is to identify the current state of its value in Bangkok and to identify potential interesting insights. AirBnb in Bangkok has become to the most popular stay in Thailand. There are several type of room in Airbnb and they are have price for each type. The people stay in airbnb sometime is not just a day, it can take for a long stay. The customer gives the reviews to their Airbnb host to make a suggestion to host to make it better in a way. So AirBnb at Bangkok has opportunty for new investment to get profit from Bangkok tourism
+> Capstone Project 2 – Data Science Bootcamp, Purwadhika
+> Author: Vito Muhammad
 
+---
 
-**Problem Formulation:**
+## 1. Background
 
-1. Where is the best place investment for new AirBnb host list? 
-2. What kind of investment that is having highest opportunity for new AirBnb host? 
-3. What kind of AirBnb’s titles host that appears most often?
+Airbnb lets travelers rent a room or an entire home from a local host instead of staying in a hotel. Bangkok is one of the most visited cities in the world, so its short-term rental market is large and competitive. This project looks at current listing data to understand how the market is structured and where a new host might find an opportunity.
 
-**Conclusion:**
-1. From a year the availability of the listing x days in the future, every AirBnb host in Bangkok ready for their room for 308 days in year based on median. The rest of day a listing may be not available because it has been booked by a guest or blocked by the host. 
-2. AirBnb at Area Vadhana, Khlong Toei, ratchattadewi, huai kwhank, and bang rak are become the most list AirBnb to stay in Bangkok based on  count on list host and valuation per area.
-3. The Most Airbnb's type room in Bangkok is Entire home/apt.
-4. AirBnb common rules of minimum stayed is 2 nights for room type entire home / apt, and the other room type is 1 night.
-5. There is a significant difference between price and room type on Airbnb.
-5. The most expensive room type is hotel room.
-6. AirBnb Popular name by host listing in bangkok are bts,room, near, bangkok, sukhumvit, cozy, and mrt.
-7. If we asumption that most of the customer fill the review, entire home/apt will is the sexiest AirBnb room and the most sold type room based on review count.
+## 2. Problem Statements
 
-**Business Recomendation:**
+1. Which areas of Bangkok are best for a new Airbnb listing?
+2. Which room type offers the best opportunity for a new host?
+3. What words appear most often in successful listing titles?
 
-1. - The new applicant that want to join as a host for AirBnb in Bangkok, we suggest you to should have the AirBnb arround sukhumvit road either in vadhana or khlong toei. 
-   - It is busy city to shopping hub with huge malls offering luxury fashion and artisanal goods, plus food courts and posh international dining. Vadhana and khlong toei also is in sukhumvit area. Which is the tourist most visit area. Sukhimvit is the best neighborhood overall. The public transportation and the vibes is awsome there.
-   - Ratchadewi and  huwaikwang are the best option place after vadhana area to built a new AirBnb. 
-   - They are near to the central tourist visit. Huwaikwang is very famous with their night market. other than that the Ratchathewi city is a popular destination for medical tourism, with several world-class hospitals located in the area offering affordable medical treatments and procedures.
-2. - The new AirBnb host should have room more than 50% with the type room is entire home/apt. So, we suggest the highest opportunity investment by roomtype for new AirBnb host should have room more than 50% with the type room is entire home/apt.
-   - if you want to build entire home/apt or hotel room or private room, Khlong toei and vadhana is the great place for your AirBnb's room.
-   - If you want to build budget AirBnb, Bang Lamphu in Phra Nakhon District is the great place. Banglamphu is the heart and soul of Bangkok. Centrally located, this neighbourhood is where you’ll find an excellent mix of historic and beautiful temples and a vibrant and lively party scene.
-   - There is a large opportunity to build entire home/apt room at Siam area in Parthum Wan district, Siam at Parthum Wan is the commercial centre of Bangkok and one of the city’s safest neighbourhoods, making it one of the best areas to stay for families. But There are not much entire home/apt in Parthum Wan.
-3. - To make it easier for your Airbnb title to be easily found by customers, we suggest you to use word ‘bts, room, near, Bangkok, bedroom, 1(room), 2(room), view, new, city, MRT’ in your title names. But it depends what your asset provide to AirBnb’s Customer.
+## 3. Data
+
+| Item | Detail |
+|---|---|
+| File | `data/airbnb_listings_bangkok.csv` |
+| Data dictionary | `docs/airbnb_listings_bangkok_data_dictionary.pdf` |
+| Source | [isi sumber asli dataset, mis. Inside Airbnb / Kaggle + link] |
+| Rows / columns | [isi jumlah baris] / [isi jumlah kolom] |
+
+## 4. Method
+
+1. Data cleaning (missing values, duplicates, outliers) – [jelaskan singkat apa yang kamu lakukan]
+2. Descriptive statistics and visualization by area and room type
+3. Statistical test to check price differences between room types – [sebutkan uji yang dipakai, mis. Kruskal-Wallis, dan nilai p-nya]
+4. Text analysis of listing titles (word frequency)
+
+## 5. Key Findings
+
+| # | Finding |
+|---|---|
+| 1 | Listings are open for booking a median of **308 days per year**; the remaining days are booked or blocked by the host. |
+| 2 | The areas with the most listings are **Vadhana, Khlong Toei, Ratchathewi, Huai Khwang, and Bang Rak**. |
+| 3 | **Entire home/apt** is the most common room type [isi persentase, mis. XX%]. |
+| 4 | Typical minimum stay is **2 nights** for entire home/apt and **1 night** for other room types. |
+| 5 | Price differs significantly between room types ([uji, p = ...]). **Hotel rooms** are the most expensive on average. |
+| 6 | The most frequent title words are **bts, room, near, bangkok, sukhumvit, cozy, mrt**. |
+| 7 | By number of reviews, **entire home/apt** is the most booked type (assuming review count approximates bookings). |
+
+<!-- Tambahkan 1–2 grafik utama di sini, contoh:
+![Listings per area](images/listings_per_area.png)
+-->
+
+## 6. Recommendations
+
+1. **Location:** Vadhana and Khlong Toei (both along Sukhumvit) have the highest listing counts, which signals strong demand. Ratchathewi and Huai Khwang are the next options.
+2. **Room type:** Focus on entire home/apt, which dominates the market. For a budget listing, the Phra Nakhon (Banglamphu) area is worth exploring.
+3. **Titles:** Use frequent search terms such as *BTS, MRT, near, room, view, city* where they honestly describe the property.
+
+> Location notes (tourist attractions, transport access, etc.) are general context rather than outputs of this dataset.
+
+## 7. Limitations
+
+- **Listing count is not profit.** A high number of listings shows demand but also competition. This analysis does not calculate occupancy rate, revenue, or ROI.
+- **Review count is only a proxy for bookings**; not every guest leaves a review.
+- The data is a **single snapshot**, so seasonality is not captured.
+- Availability (308 days) does not show how many days are actually booked.
+
+## 8. Next Steps
+
+- Add price-per-area analysis and an estimated revenue / occupancy model.
+- Compare with neighboring cities or hotel prices.
+- Build a simple dashboard (Tableau / Streamlit).
+
+## 9. Repository Structure
+
+```
+AirBnb-Host-Analysis-Bangkok/
+├── data/
+│   └── airbnb_listings_bangkok.csv
+├── docs/
+│   ├── airbnb_listings_bangkok_data_dictionary.pdf
+│   └── capstone2_presentation.pdf
+├── notebooks/
+│   └── bangkok_airbnb_analysis.ipynb
+├── images/
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+## 10. How to Run
+
+```bash
+git clone https://github.com/rgt88/AirBnb-Host-Analysis-Bangkok.git
+cd AirBnb-Host-Analysis-Bangkok
+pip install -r requirements.txt
+jupyter notebook notebooks/bangkok_airbnb_analysis.ipynb
+```
+
+## 11. Links
+
+- [Presentation (PDF)](docs/capstone2_presentation.pdf)
+- [Notebook](notebooks/bangkok_airbnb_analysis.ipynb)
+
+> **Note:** the notebook uses NLTK stopwords. On first run it downloads them automatically (internet required).
+> Tested with Python 3.14 and the library versions in `requirements.txt`.

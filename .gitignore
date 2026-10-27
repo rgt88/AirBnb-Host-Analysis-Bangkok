@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets - JANGAN PERNAH di-commit
+.env
+*.key
+credentials.json
+config.ini
+secrets.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Output yang dibuat saat notebook dijalankan
+notebooks/*.xlsx
+notebooks/*.jpeg
+notebooks/*.png
